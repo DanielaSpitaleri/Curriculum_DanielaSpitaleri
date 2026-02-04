@@ -55,11 +55,11 @@ body {
     height: 70px;
 }
 
-.side:hover {
+/* .side:hover {
     background-color: #b4c0f4;
     border-radius: 50%;
     padding: 0.5rem 1rem;
-}
+} */
 
 .textNav {
     font-family: Impact, 'Arial Narrow Bold', sans-serif;
@@ -316,7 +316,56 @@ body {
     display: inline-block;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
+/* Applica il reset a tutti i link della navbar e bottoni trasparenti */
+.side, 
+.textNav, 
+.btn-transparent, 
+.button-9 {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent; /* Rimuove il flash nero/blu su mobile */
+}
 
+/* Stato normale: Forza il colore originale */
+.side, .textNav {
+    background-color: transparent !important;
+    color: aliceblue !important;
+}
+
+/* Hover: Applica il colore solo quando il mouse è sopra */
+/* Hover: Forza lo sfondo azzurrino E il testo scuro */
+.side:hover, 
+.side:hover .textNav {
+    background-color: #b4c0f4 !important;
+    color: #050c68 !important; /* Questo è il blu scuro del tuo body */
+    border-radius: 50%;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Se 'textNav' è una classe dentro 'side', forziamo anche quella */
+.side:hover .textNav {
+    background-color: transparent !important; /* Evita doppi sfondi */
+}
+
+/* RESET TOTALE: Questo elimina il "colore che rimane" dopo il click */
+.side:focus, 
+.side:active, 
+.side:focus-visible,
+.textNav:focus,
+.textNav:active {
+    background-color: transparent !important;
+    color: aliceblue !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Se il problema è sui bottoni trasparenti (quelli con le icone) */
+.btn-transparent:focus, 
+.btn-transparent:active {
+    background-color: transparent !important;
+    transform: scale(1) !important; /* Torna alla dimensione originale */
+    box-shadow: none !important;
+}
 /* FORMAZIONE SECTION */
 .section2 {
     background: #0A012E;

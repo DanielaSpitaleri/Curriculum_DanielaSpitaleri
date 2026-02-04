@@ -371,44 +371,68 @@ body {
     overflow: visible; /* Cambia da hidden a visible */
 }
 
-.timeline::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, #4b546f, #667eea, #4b546f);
-    transform: translateX(-50%);
-}
-
 .timeline-row {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    margin-bottom: 3rem;
+    align-items: center; /* Centra verticalmente gli elementi sulla linea */
+    margin-bottom: 4rem; /* Aumentato lo spazio tra le date */
     position: relative;
+    width: 100%;
+    min-height: 100px; /* Assicura uno spazio minimo */
 }
+.timeline::before {
+    content: "";
+    position: absolute !important;
+    left: 28% !important; /* Prova il 28% per centrarla sui pallini */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, #667eea, transparent);
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.timeline-row::after {
+    content: "";
+    position: absolute !important;
+    left: 28% !important; /* Deve essere uguale a sopra */
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    background: #00ccff;
+    border: 3px solid #1a233a;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+
+   
 
 .timeline-time {
-    position: absolute;
-    left: calc(50% - 200px);
-    width: 180px;
-    text-align: right;
+    position: relative;
+    flex: 1.2; /* Distribuisce lo spazio equamente */
+    text-align: left;
+    padding-right: 50px; /* Spazio tra data e linea */
     color: #bcd0f7;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    padding: 10px;
+    z-index: 2;
+    left: 0;
+     width: auto;
 }
 
+
+
 .timeline-content {
-    width: 400px;
+    flex: 1.5; /* Il rettangolo sarà più largo della data */
     background: #1a233a;
     padding: 1.5rem;
     border-radius: 10px;
-    margin-left: 20px;
+    margin-left: 50px; /* Spazio tra linea e rettangolo */
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     position: relative;
+    z-index: 2;
 }
 
 .container2 {
@@ -454,7 +478,105 @@ body {
     width: 100%;
 }
 
+/* Container originale a due colonne */
+.container4 {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
 
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 60px; /* Aumentato un po' per dare respiro ai tooltip */
+  align-items: center;
+}
+
+/* Stile del logo singolo - Rinforzato */
+.skill-simple {
+  position: relative;
+  cursor: pointer;
+  display: inline-block; /* Fondamentale per permettere la trasformazione */
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  z-index: 1;
+}
+
+.skill-simple img {
+  width: 80px; 
+  height: auto;
+  display: block;
+  pointer-events: none; /* Evita che l'immagine disturbi l'hover del contenitore */
+}
+
+/* Effetto Ingrandimento */
+.skill-simple:hover {
+  transform: scale(1.25) !important; /* Ingrandimento del 25% */
+  z-index: 10; /* Porta il logo sopra gli altri mentre si ingrandisce */
+}
+
+/* Tooltip (il nome che appare) */
+.skill-simple::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 50%;
+  left: 130%; 
+  transform: translateY(-50%) translateX(-15px);
+  
+  background: #1f2937; 
+  color: #ffffff;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-out;
+}
+
+/* Freccetta del tooltip */
+.skill-simple::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 115%;
+  transform: translateY(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent #1f2937 transparent transparent;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  pointer-events: none;
+}
+
+/* Attivazione Hover */
+.skill-simple:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+.skill-simple:hover::before {
+  opacity: 1;
+}
+
+/* Responsive: su mobile il nome appare sotto il logo */
+@media (max-width: 768px) {
+  .skill-simple::after {
+    left: 50%;
+    top: 115%;
+    transform: translateX(-50%) translateY(10px);
+  }
+  .skill-simple:hover::after {
+    transform: translateX(-50%) translateY(0);
+  }
+  /* Nascondiamo la freccia su mobile per pulizia */
+  .skill-simple::before {
+    display: none;
+  }
+}
 /* Progress bars CENTRATE */
 .container4 {
     display: flex;

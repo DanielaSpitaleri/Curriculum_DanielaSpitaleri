@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniela Spitaleri</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="curriculum.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="profilo.jpg">
+  <style>
+    .animate-on-load {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="bg">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button class="navbar-toggler" id="navbar-toggler" type="button" aria-controls="overlayMenu" aria-expanded="false" aria-label="Apri menu">
+          <span class="bar bar1"></span>
+          <span class="bar bar2"></span>
+          <span class="bar bar3"></span>
+        </button>
+
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item side"><a class="nav-link textNav" href="#sectionA">Home</a></li>
+            <li class="nav-item side"><a class="nav-link textNav" href="#sectionB">Formazione</a></li>
+            <li class="nav-item side"><a class="nav-link textNav" href="#sectionC">Competenze</a></li>
+            <li class="nav-item side"><a class="nav-link textNav" href="#sectionD">Progetti</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="overlay-menu" id="overlayMenu">
+      <ul class="overlay-menu-list">
+        <li><a class="overlay-menu-item" href="#sectionA">Home</a></li>
+        <li><a class="overlay-menu-item" href="#sectionB">Formazione</a></li>
+        <li><a class="overlay-menu-item" href="#sectionC">Competenze</a></li>
+        <li><a class="overlay-menu-item" href="#sectionD">Progetti</a></li>
+      </ul>
+    </div>
+
+    <section id="sectionA" class="main-section">
+      <div class="section1">
+        <div class="container-home">
+          <div class="text-container hero-left animate-on-load" id="hero-left">
+            <h1 id="typingText">DANIELA SPITALERI</h1>
+
+            <button class="button-9 animate-on-load" id="download-cv-button" type="button">
+              <span class="text">Download CV</span>
+            </button>
+
+            <div class="icon-buttons">
+              <button type="button" class="btn btn-transparent animate-on-load" id="send-email-button" aria-label="Invia email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+                </svg>
+              </button>
+
+              <button type="button" class="btn btn-transparent animate-on-load" id="location-button" title="Minturno (LT)" aria-label="Apri posizione">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                </svg>
+              </button>
+
+              <button type="button" class="btn btn-transparent animate-on-load" id="linkedin-button" aria-label="Apri LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                </svg>
+              </button>
+            </div>
+
+            <section id="popAlert" class="popup" aria-modal="true" role="dialog" aria-label="Popup email">
+              <aside>
+                <div class="popup-header">
+                  <div class="popup-title">
+                    <span class="popup-icon" aria-hidden="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                      </svg>
+                    </span>
+                    <span>
+                      <strong>Contatta Daniela</strong>
+                      <small>Ti risponderò il prima possibile</small>
+                    </span>
+                  </div>
+                  <button type="button" class="popup-close" id="close-email-popup" aria-label="Chiudi popup">✕</button>
+                </div>
+                <div class="email-address">
+                  <span class="email-label">INDIRIZZO EMAIL</span>
+                  <strong>danielaspitaleri3@gmail.com</strong>
+                </div>
+                <div class="popup-actions">
+                  <button type="button" id="open">
+                    <span>Scrivimi un'email</span>
+                    <span class="button-arrow" aria-hidden="true">↗</span>
+                  </button>
+                  <button type="button" id="copy">Copia indirizzo</button>
+                </div>
+                <div id="notification" class="notification hidden" aria-live="polite">
+                  <span aria-hidden="true">✓</span>
+                  <p>Email copiata negli appunti</p>
+                </div>
+                <p class="popup-note">Si aprirà l'applicazione email predefinita del tuo dispositivo.</p>
+              </aside>
+            </section>
+          </div>
+
+          <div class="image-container container1 animate-on-load" id="hero-image">
+            <img src="profilo.jpg" alt="Profilo" class="profile-img">
+          </div>
+        </div>
+
+        <div class="content-box hero-right" data-aos="fade-up">
+          <h1 class="chi-sono" data-aos="zoom-in" data-aos-delay="200">Chi Sono</h1>
+          <div class="aboutMe" data-aos="fade-up" data-aos-delay="400">
+            Frequento il secondo anno della Laurea Magistrale in Ingegneria Informatica, con curriculum in Intelligenza Artificiale e Robotica.<br>
+            Appassionata di programmazione e tecnologie innovative, affronto ogni progetto con curiosità, creatività e spirito di iniziativa. Sono sempre alla ricerca di nuove opportunità per mettere in pratica le mie competenze, crescere professionalmente e contribuire alla realizzazione di soluzioni concrete e intelligenti.
+          </div>
+
+          <div class="birthdate-box" data-aos="fade-up" data-aos-delay="600">
+            DATA DI NASCITA: 09/06/2003
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sectionB" class="main-section">
+      <div class="section2">
+        <div class="sectionContent">
+          <h1 class="title4" data-aos="fade-down">Formazione accademica</h1>
+
+          <div class="container">
+            <div class="timeline" data-aos="fade-up">
+              <div class="timeline-row">
+                <div class="timeline-time" data-aos="fade-right" data-aos-delay="200">2025 - Oggi</div>
+                <div class="timeline-content" data-aos="fade-left" data-aos-delay="300">
+                  <p><b>Laurea Magistrale in Ingegneria Informatica</b></p>
+                  <p class="text4">(in corso)</p>
+                </div>
+              </div>
+
+              <div class="timeline-row">
+                <div class="timeline-time" data-aos="fade-right" data-aos-delay="400">2022 - 2025</div>
+                <div class="timeline-content" data-aos="fade-left" data-aos-delay="500">
+                  <p><b>Laurea Triennale in Ingegneria Informatica e delle Telecomunicazioni</b></p>
+                  <p class="text4">Conseguita nel periodo accademico 2024/2025</p>
+                </div>
+              </div>
+
+              <div class="timeline-row">
+                <div class="timeline-time" data-aos="fade-right" data-aos-delay="600">2021 - 2022</div>
+                <div class="timeline-content" data-aos="fade-left" data-aos-delay="700">
+                  <p>Diploma di Istituto Tecnico Amministrazione Finanza e Marketing, indirizzo Sistemi Informativi Aziendali (SIA)</p>
+                  <p class="text4">con votazione 100/100 e lode</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sectionC" class="main-section">
+      <div class="section3">
+        <div class="bg2">
+          <div class="hero">
+            <div class="sectionContent3" id="skills-section">
+              <h1 class="title5" data-aos="fade-down">Competenze</h1>
+
+              <div class="skill-grid" aria-label="Elenco competenze">
+                <div class="skill-badge" tabindex="0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"><span>HTML5</span></div>
+                <div class="skill-badge" tabindex="0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"><span>CSS3</span></div>
+                <div class="skill-badge" tabindex="0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></div>
+                <div class="skill-badge" tabindex="0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><span>Python</span></div>
+                <div class="skill-badge" tabindex="0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"><span>C++</span></div>
+                <div class="skill-badge" tabindex="0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"><span>Java</span></div>
+                <div class="skill-badge" tabindex="0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL"><span>SQL</span></div>
+                <div class="skill-badge" tabindex="0"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"><span>GitHub</span></div>
+                <div class="skill-badge skill-badge-text" tabindex="0"><span class="skill-text-only">Agile / Scrum</span></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sectionD" class="main-section">
+      <div class="section4">
+        <div class="sectionContent">
+          <h1 class="title4" data-aos="fade-down">Progetti Universitari</h1>
+
+          <div class="projects-container">
+            <div class="project-card" data-aos="flip-left" data-aos-delay="100">
+              <div class="project-img project-video-wrap">
+                <video id="jetpack-video" src="JetpackJoyride.mp4" playsinline controls controlsList="nodownload noplaybackrate" preload="metadata" aria-label="Video dimostrativo del progetto Jetpack Joyride"></video>
+              </div>
+              <div class="project-info">
+                <h3>Jetpack Joyride</h3>
+                <p>Replicazione del celebre videogioco sviluppata in C++. Gestione della fisica di volo, collisioni e generazione procedurale degli ostacoli.</p>
+                <div class="project-buttons">
+                  <a href="https://github.com/DanielaSpitaleri/JetpackJoyride" target="_blank" rel="noopener noreferrer" class="btn-project">GitHub Code</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card" data-aos="flip-left" data-aos-delay="300">
+              <div class="project-img">
+                <a href="gestione-magazzino.png" target="_blank" rel="noopener noreferrer" aria-label="Apri l'immagine del progetto Gestione magazzino a dimensione intera">
+                  <img src="gestione-magazzino.png" alt="Schermata dell'applicazione Gestione magazzino">
+                </a>
+              </div>
+              <div class="project-info">
+                <h3>Gestione Inventario</h3>
+                <p>Applicazione desktop Java per la gestione di magazzino, sviluppata con IntelliJ IDEA e architettura MVC. Include gestione prodotti e movimenti, alert sulle scorte, filtri, esportazione CSV e statistiche con database MySQL.</p>
+                <p class="project-meta">Metodologia Agile Scrum · Taiga · GitHub · JavaFX · JUnit</p>
+                <div class="project-buttons">
+                  <a href="https://github.com/DanielaSpitaleri/Sistema-di-Gestione-Inventario-e-Magazzino-per-Piccole-Attivita-" target="_blank" rel="noopener noreferrer" class="btn-project">GitHub Code</a>
+                  <a href="Ingegneria_del_software.pdf" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-secondary">Documentazione PDF</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card" data-aos="flip-left" data-aos-delay="500">
+              <div class="project-img">
+                <a href="keysight-device.png" target="_blank" rel="noopener noreferrer" aria-label="Apri l'immagine della strumentazione Keysight a dimensione intera">
+                  <img src="keysight-device.png" alt="Dispositivo Keysight SA8710A utilizzato per l'analisi di cybersecurity">
+                </a>
+              </div>
+              <div class="project-info">
+                <h3>Analisi Cybersecurity OWASP-Biblioteca</h3>
+                <p>Analisi di cybersecurity su un'applicazione Java Spring Boot volutamente vulnerabile. Il progetto confronta penetration testing black-box, revisione white-box, Keysight SA8710A e agenti AI SmolAgents con Regolo e Ollama, valutando vulnerabilità OWASP e conformità UN-R155/UN-R156.</p>
+                <p class="project-meta">Java · Spring Boot · OWASP · SmolAgents · Regolo · Ollama</p>
+                <div class="project-buttons">
+                  <a href="relazione-cybersecurity-owasp.pdf" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-secondary">Documentazione PDF</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card" data-aos="flip-left" data-aos-delay="700">
+              <div class="project-img">
+                <a href="bone-fracture-detection.png" target="_blank" rel="noopener noreferrer" aria-label="Apri lo screenshot del progetto Bone Fracture Detection a dimensione intera">
+                  <img src="bone-fracture-detection.png" alt="Interfaccia IPA Clinical Review per il rilevamento delle fratture">
+                </a>
+              </div>
+              <div class="project-info">
+                <h3>Bone Fracture Detection</h3>
+                <p>Pipeline automatica per individuare fratture nelle radiografie pediatriche dell’avambraccio. Combina ROI candidate generate con C++ e OpenCV, feature GLCM/LBP/HOG, classificazione SVM-RBF e post-processing NMS.</p>
+                <p class="project-meta">C++ · OpenCV · Python · Machine Learning · SVM-RBF · NMS</p>
+                <div class="project-buttons">
+                  <a href="https://github.com/DanielaSpitaleri/Bone_Fracture_Detection" target="_blank" rel="noopener noreferrer" class="btn-project">GitHub Code</a>
+                  <a href="Bone_Fracture_Detection.pdf" target="_blank" rel="noopener noreferrer" class="btn-project btn-project-secondary">Documentazione PDF</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <button id="backToTopBtn" title="Torna su" aria-label="Torna in cima">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16" aria-hidden="true">
+      <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" />
+    </svg>
+  </button>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.AOS) {
+        AOS.init({
+          duration: 800,
+          once: false,
+          mirror: true,
+          offset: 100,
+          delay: 0,
+          easing: 'ease-in-out'
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

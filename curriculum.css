@@ -1017,19 +1017,6 @@ body {
   display: none;
 }
 
-@media (max-width: 1200px) {
-  .container-home {
-    gap: 2.5rem;
-  }
-
-  .content-box {
-    width: min(860px, 92%);
-  }
-
-  .skill-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
 
 @media (max-width: 992px) {
   .navbar-collapse {
@@ -1097,11 +1084,13 @@ body {
   .overlay-menu-item {
     display: block;
     padding: 1rem 2rem;
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
     font-size: clamp(1.5rem, 5vw, 2.2rem);
     text-decoration: none;
     border-radius: 999px;
-    transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+    transition: background 0.25s ease,
+                color 0.25s ease,
+                transform 0.2s ease;
   }
 
   .overlay-menu-item:hover,
@@ -1170,6 +1159,41 @@ body {
     padding: 4.2rem 1rem 2.5rem;
   }
 
+  /* Spazio per evitare che il nome
+     finisca sotto la navbar */
+  .section1 {
+    padding-top: 140px;
+    justify-content: flex-start;
+    min-height: 100vh;
+    height: auto;
+  }
+
+  .container-home {
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 auto;
+  }
+
+  /* Elimina lo spostamento negativo */
+  .text-container {
+    margin-top: 0;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    flex: 0 0 auto;
+  }
+
+  /* Mantiene il nome visibile */
+  .text-container h1 {
+    transform: none;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    max-width: 100%;
+    font-size: clamp(2rem, 7vw, 3.5rem);
+    line-height: 1.15;
+    overflow-wrap: break-word;
+  }
+
   .content-box {
     padding: 2rem 1rem;
   }
@@ -1189,8 +1213,18 @@ body {
 }
 
 @media (max-width: 576px) {
+  /* Più spazio superiore sui telefoni */
+  .section1 {
+    padding-top: 150px;
+  }
+
   .text-container h1 {
+    font-size: clamp(1.8rem, 7.5vw, 2.5rem);
+    line-height: 1.2;
+    letter-spacing: 0.02em;
     -webkit-text-stroke: 2px #fff;
+    transform: none;
+    margin-top: 0;
   }
 
   .button-9 {
@@ -1217,6 +1251,17 @@ body {
 }
 
 @media (max-width: 420px) {
+  /* Ottimizzazione telefoni molto piccoli */
+  .section1 {
+    padding-top: 155px;
+  }
+
+  .text-container h1 {
+    font-size: clamp(1.7rem, 7vw, 2.1rem);
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+  }
+
   .title4,
   .title5 {
     letter-spacing: 0.04em;
@@ -1235,21 +1280,6 @@ body {
   .code-block {
     padding: 1rem 0.8rem 1.1rem;
     font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .section1 {
-    padding-top: 130px;
-    justify-content: flex-start;
-  }
-
-  .text-container {
-    margin-top: 0;
-  }
-
-  .text-container h1 {
-    transform: none;
   }
 }
 

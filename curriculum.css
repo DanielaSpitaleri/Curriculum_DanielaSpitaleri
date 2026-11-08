@@ -1237,3 +1237,19 @@ body {
     font-size: 0.8rem;
   }
 }
+
+@media (max-width: 768px) {
+  .section1 {
+    padding-top: 130px;
+    justify-content: flex-start;
+  }
+
+  .text-container {
+    margin-top: 0;
+  }
+
+  .text-container h1 {
+    transform: none;
+  }
+}
+
